@@ -6,6 +6,6 @@ npm install
 
 npm start 
 
-then 
+then :
 
 http://localhost:4200/
