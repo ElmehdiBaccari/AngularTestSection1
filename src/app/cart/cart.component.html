@@ -1,0 +1,29 @@
+<div class="cart-wrapper">
+  <div class="panel panel-default">
+    
+    <div class="panel-heading">
+      <div>Item</div>
+      <div>Price</div>
+      <div>Total Price</div>
+      <div></div>
+    </div>
+
+ 
+    <div class="list-group">
+          <app-cartitem
+            class="list-group-item"
+            *ngFor="let item of cartItems; let i = index"
+            [cartItem]="item"
+            (cartItemDeleted)="onCartItemDeleted($event)"
+            (cartItemChanged)="onCartItemChanged($event)"
+            >
+          </app-cartitem>
+    </div>
+    <div class="panel-footer">
+      <h4>Total {{cartTotal}}</h4>
+     
+    </div>
+  </div>
+</div>
+
+ 

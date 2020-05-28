@@ -1,0 +1,17 @@
+  <h1>Cart</h1>
+  <app-cart
+    [cartItems]="cartItems"
+    [cartTotal]="cartTotal"
+    (cartItemDeleted)="onCartItemDeleted($event)"
+    (cartItemChanged)="onCartItemChanged($event)"
+    >
+  </app-cart>
+
+  <p>Hello Adventurer, welcome to the town of Angular!
+    Here you can explore all the exciting stuff like meeting weird monster, learning new spell, and discovering rare item.
+    But first, you need some weapon/spell to accompany you along the way!
+    I will give you 1000 gold, so choose your weapon/spell wisely~</p>
+  <app-product 
+    (cartUpdated)="onCartUpdated($event)"
+    >
+  </app-product>
